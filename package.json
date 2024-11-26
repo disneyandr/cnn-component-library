@@ -1,7 +1,8 @@
 {
   "name": "cnn-component-library",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
