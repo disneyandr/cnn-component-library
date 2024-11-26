@@ -6,6 +6,7 @@ interface ButtonProps {
     label: string;
     onClick: () => void;
     bgColor: string;
+    hover: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, bgColor, hover }) => {
