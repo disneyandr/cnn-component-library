@@ -6,4 +6,5 @@ export default {
     component: Button,
 };
 
-export const Default = () => <Button label="Click me!" onClick={()=> alert('Olha só, deu certo!')}></Button>;
+export const Primario = () => <Button label="Primário!" onClick={() => alert('Clicou no botão primário!')}></Button>;
+export const Secundario = () => <Button label="Primário!" onClick={() => alert('Clicou no botão secundario!')}></Button>;
