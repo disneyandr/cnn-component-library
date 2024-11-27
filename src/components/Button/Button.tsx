@@ -1,6 +1,6 @@
 import React from 'react';
 export interface ButtonProps {
-  label: string;
+  label?: string;
   onClick: () => void;
   colorBg: string;
   colorHover: string;
