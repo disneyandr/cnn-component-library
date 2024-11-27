@@ -11,7 +11,7 @@ const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 export const Enviar = Template.bind({});
 Enviar.args = {
-  label: 'Enviar',
+  
   onClick: () => alert('Enviando!'),
   colorBg: 'bg-blue-500',
   colorHover: 'hover:bg-blue-700',

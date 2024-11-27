@@ -6,7 +6,7 @@ export interface ButtonProps {
   colorHover: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, colorBg, colorHover }) => {
+const Button: React.FC<ButtonProps> = ({ label = 'Bt Da Biblioteca', onClick, colorBg, colorHover }) => {
   const defaultClasses = "px-4 py-2 text-white font-bold rounded"; // Classes padrão
   return (
     <button className={`${defaultClasses} ${colorBg} ${colorHover}`} onClick={onClick}>
