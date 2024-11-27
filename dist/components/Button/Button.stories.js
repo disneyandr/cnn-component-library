@@ -1,8 +1,21 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 export default {
-    title: "Components/Button",
+    title: 'Components/Button',
     component: Button,
 };
-export const Primario = () => React.createElement(Button, { label: "Prim\u00E1rio!", onClick: () => alert('Clicou no botão primário!'), bgColor: "bg-blue-500", hover: "hover:bg-blue-600" });
-export const Secundario = () => React.createElement(Button, { label: "Secund\u00E1rio!", onClick: () => alert('Clicou no botão secundario!'), bgColor: "bg-orange-500", hover: "hover:bg-orange-800" });
+const Template = (args) => React.createElement(Button, Object.assign({}, args));
+export const Enviar = Template.bind({});
+Enviar.args = {
+    label: 'Enviar',
+    onClick: () => alert('Enviando!'),
+    colorBg: 'bg-blue-500',
+    colorHover: 'hover:bg-blue-700',
+};
+export const Deletar = Template.bind({});
+Deletar.args = {
+    label: 'Deletar',
+    onClick: () => alert('Deletando!'),
+    colorBg: 'bg-red-500',
+    colorHover: 'hover:bg-red-700',
+};

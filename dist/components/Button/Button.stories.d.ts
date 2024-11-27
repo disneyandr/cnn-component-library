@@ -1,8 +1,6 @@
-import React from "react";
-declare const _default: {
-    title: string;
-    component: any;
-};
+import { Meta } from '@storybook/react';
+import { ButtonProps } from './Button';
+declare const _default: Meta;
 export default _default;
-export declare const Primario: () => React.JSX.Element;
-export declare const Secundario: () => React.JSX.Element;
+export declare const Enviar: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, ButtonProps>;
+export declare const Deletar: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, ButtonProps>;

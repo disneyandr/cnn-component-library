@@ -1,11 +1,26 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import Button, { ButtonProps } from './Button';
 
 export default {
-    title: "Components/Button",
-    component: Button,
-    
+  title: 'Components/Button',
+  component: Button,
+} as Meta;
+
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
+
+export const Enviar = Template.bind({});
+Enviar.args = {
+  label: 'Enviar',
+  onClick: () => alert('Enviando!'),
+  colorBg: 'bg-blue-500',
+  colorHover: 'hover:bg-blue-700',
 };
 
-export const Primario = () => <Button label="Primário!" onClick={() => alert('Clicou no botão primário!')} colorBg="bg-blue-500" colorHouver="hover:bg-blue-600"></Button>;
-export const Secundario = () => <Button label="Secundário!" onClick={() => alert('Clicou no botão secundario!')} colorBg="bg-orange-500" colorHouver="hover:bg-orange-800" ></Button>;
+export const Deletar = Template.bind({});
+Deletar.args = {
+  label: 'Deletar',
+  onClick: () => alert('Deletando!'),
+  colorBg: 'bg-red-500',
+  colorHover: 'hover:bg-red-700',
+};

@@ -1,9 +1,9 @@
 import React from 'react';
-interface ButtonProps {
-    children: React.ReactNode;
+export interface ButtonProps {
+    label: string;
     onClick: () => void;
     colorBg: string;
-    colorHouver: string;
+    colorHover: string;
 }
 declare const Button: React.FC<ButtonProps>;
 export default Button;

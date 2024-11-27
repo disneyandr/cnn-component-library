@@ -1,18 +1,19 @@
 import React from 'react';
-
-interface ButtonProps {
-    label: string;
-    onClick: () => void;
-    colorBg: string;
-    colorHover: string;
+export interface ButtonProps {
+  label: string;
+  onClick: () => void;
+  colorBg: string;
+  colorHover: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick,colorBg, colorHover }) => {
-    return (
-        <button className={`${colorBg} ${colorHover}`} onClick = { onClick } >
-            { label }
-    </button >
+const Button: React.FC<ButtonProps> = ({ label, onClick, colorBg, colorHover }) => {
+  const defaultClasses = "px-4 py-2 text-white font-bold rounded"; // Classes padrão
+  return (
+    <button className={`${defaultClasses} ${colorBg} ${colorHover}`} onClick={onClick}>
+      {label}
+    </button>
   );
 };
+
 
 export default Button;
